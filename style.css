@@ -31,18 +31,18 @@
 }
 
 .video-container {
-    display: flex;
-    align-items: center;
-    line-height: 1.5;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Para que ocupe toda la pantalla */
+    overflow: hidden;
 }
 
 .miVideo { 
-    padding: fixed;
     width: 100px;
     height: 50px;
     z-index: 0;  
-    margin: 6px;
-    align-items: 20px;
+    margin: 6px auto; /* Centrar mejor */
+    display: block;
 }
 
 .service-text {
@@ -130,9 +130,9 @@
 /* 🔹 Ajuste para móviles */
 @media (max-width: 768px) {
     .row {
-        position: absolute;
-        transform: translateY(-320px); /* 🔹 Ajusta la altura en celulares */
-        padding: 66px 0px; /* 🔹 Reduce un poco el padding en móviles */
+        position: relative;
+        transform: translateY(0); /* Evita que se desplace demasiado */
+        padding: 50px 10px;
     }
 }
 
@@ -195,12 +195,8 @@
 
 
 .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 19000px; /* Ajusta según el tamaño máximo que prefieras */
+    max-width: 100%;
     height: 1350px;
-    overflow: hidden;
-    border-radius: 10px;
 }
 
 .carousel-inner {
@@ -250,9 +246,8 @@
 
 /* Estilos responsive */
 @media (max-width: 768px) {
-    .carousel {
-        width: 100%;
-        height: 485px; /* Ajusta la altura en móviles */
+    .image-container img {
+        box-shadow: 0 0 10px #6000b9, 0 0 20px #ff00ff, 0 0 30px #ff5fea;
     }
 
     .carousel-item img {
