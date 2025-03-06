@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Marketing v.v.w</title>
+
+    <link rel="icon" href="galeria/pesta.png">
+    
+
+    
+     <!-- font awesome cdn link -->  
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <!-- custon css file link -->
+     <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+<!-- header section starts -->
+
+  <header class="header">
+
+    <!-- Primer Video -->
+    <div class="video-container">
+      <video autoplay loop muted class="miVideo">
+        <source src="galeria/robot.mp4" type="video/mp4">
+        tu navegador tuti
+      </video>
+
+      <h2 class="service-text">
+        <span>Service de Publicité</span>  
+        <span>V.V.W</span>
+      </h2>
+    </div>
+
+    <nav class="navbar">
+
+      <a href="#Inicio">Inicio</a>
+      <a href="#Nosotros">Nosotros</a>
+      <a href="#Servicios +">Servicios +</a>
+      <a href="#Cursos">Cursos</a>
+      <a href="#Blog">Blog</a>
+
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div> 
+    </div>
+
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here...">
+      <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+
+  </header>
+
+<!-- header section ends -->
+
+
+
+
+
+
+<!-- home section stars -->
+<section class="home" id="home">
+
+  <!-- Segundo Video -->
+  <video autoplay loop class="video-container">
+    <source src="galeria/robot.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+
+  <div class="text">
+    <a href="#" class="btn">CONTÁCTANOS.</a>
+   </div>
+
+
+  <div class="iconos">
+
+
+    <a href="https://www.facebook.com/valeria.vega.2023">
+
+       <img src="galeria/facebook.ico" alt="" width="35px">
+
+    </a>
+
+    <a href="https://wa.me/966978085?text=hola una consulta">
+
+       <img src="galeria/whasa.ico" alt="" width="35px">
+  
+    </a>
+
+    <a href="https://x.com/twitter?lang=es">
+
+       <img src="galeria/twitter.ico" alt="" width="35px">
+
+    </a>
+
+    <a href="mailto:siempre.unidos.w@gmail.com?
+      subject=Feedback&body=Message">
+
+       <img src="galeria/correo.ico" alt="" width="35px">
+
+    </a>
+  </div>
+</section>
+<!-- home section ends -->
+
+
+
+
+
+
+
+
+<!-- about section stars -->
+<section class="about" id="about">
+ 
+ <!-- TercerVideo como fondo -->
+  <div class="overlay-video">
+    <video autoplay loop muted class="background-video">
+      <source src="galeria/tercero.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </div>
+
+ <h1 class="heading "> <span>“About us” “Sobre nosotros”</span> "Über uns" "À propos de nous" </h1>
+
+  <div class="row">
+
+   <div class="content">
+     <h3>¿Por qué nuestro servicio es especial?</h3>
+
+      <p>
+       Con años de experiencia, garantizamos un servicio confiable, 
+       eficiente y de alta calidad, adaptado a las necesidades de 
+       cada cliente. Nuestro compromiso es brindarte resultados 
+       excepcionales con un enfoque profesional.
+      </p>
+
+      <a href="#carousel" class="btn-2">Leer más</a>  <!-- ✅ Botón con enlace -->
+    </div>
+  </div>
+
+</section>
+<!-- about section ends -->
+
+
+
+
+
+
+
+
+<!-- Carousel Section -->
+<div class="carousel" id="carousel">  <!-- ✅ Se agregó ID "carousel" -->
+  <div class="carousel-inner">
+      <img src="galeria/01.png" class="carousel-item active">
+      <img src="galeria/02.png" class="carousel-item">
+      <img src="galeria/03.png" class="carousel-item">
+      <img src="galeria/04.png" class="carousel-item">
+  </div>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+</div>
+<!-- Franja negra debajo del carrusel -->
+<div class="carousel-footer"></div>
+
+
+
+  <!-- ✅ Imagen agregada después del carrusel -->
+  <div class="image-container">
+    <img src="galeria/estadis.png" alt="Descripción de la imagen">
+  </div>
+
+<script src="script.js"></script>
+
+
+
+<script src="script.js"></script>
+<!-- Carousel Section Ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- custom js file link -->
+   <script src="script.js"></script>
+
+</body>
+</html>
