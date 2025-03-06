@@ -31,18 +31,18 @@
 }
 
 .video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Para que ocupe toda la pantalla */
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
 }
 
 .miVideo { 
+    padding: fixed;
     width: 100px;
     height: 50px;
     z-index: 0;  
-    margin: 6px auto; /* Centrar mejor */
-    display: block;
+    margin: 6px;
+    align-items: 20px;
 }
 
 .service-text {
@@ -130,9 +130,9 @@
 /* 🔹 Ajuste para móviles */
 @media (max-width: 768px) {
     .row {
-        position: relative;
-        transform: translateY(0); /* Evita que se desplace demasiado */
-        padding: 50px 10px;
+        position: absolute;
+        transform: translateY(-320px); /* 🔹 Ajusta la altura en celulares */
+        padding: 66px 0px; /* 🔹 Reduce un poco el padding en móviles */
     }
 }
 
@@ -195,8 +195,12 @@
 
 
 .carousel {
-    max-width: 100%;
+    position: relative;
+    width: 100%;
+    max-width: 19000px; /* Ajusta según el tamaño máximo que prefieras */
     height: 1350px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .carousel-inner {
@@ -246,8 +250,9 @@
 
 /* Estilos responsive */
 @media (max-width: 768px) {
-    .image-container img {
-        box-shadow: 0 0 10px #6000b9, 0 0 20px #ff00ff, 0 0 30px #ff5fea;
+    .carousel {
+        width: 100%;
+        height: 485px; /* Ajusta la altura en móviles */
     }
 
     .carousel-item img {
@@ -484,6 +489,104 @@ display: none;
     transform: scaleY(1);
 }
 
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+        
+    }
+
+    
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #ffffff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+        
+    }
+   
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin:1.4rem;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
 .header .search-form input{
     height: 100%;
     width: 100%;
