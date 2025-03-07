@@ -10,7 +10,7 @@
 }
 
 *{
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: "M PLUS Rounded 1c", sans-serif  ;
     margin: 0; padding: 0;
     box-sizing: border-box;
     outline: none; border: none;
@@ -23,7 +23,7 @@
     z-index: 0;
     width: 100%;
     height: auto;
-    margin-top: 95px;
+    margin-top: +8.0rem;
     display: flex;
     align-items: center;
     background-position: center;
@@ -33,7 +33,15 @@
 .video-container {
     display: flex;
     align-items: center;
-    line-height: 1.5;
+    line-height: 1.0;
+    
+}
+
+/* 🔹 Ajuste para pantallas grandes (PC) */
+@media (min-width: 1024px) {
+    .home video {
+        margin-top: +12.0rem;
+    }
 }
 
 .miVideo { 
@@ -45,16 +53,29 @@
     align-items: 20px;
 }
 
+/* 🔹 Ajuste para pantallas grandes (PC) */
+@media (min-width: 1024px) {
+    .miVideo {
+        width: 100px;
+        height: 90px;
+    }
+}
+
 .service-text {
     margin-left: 120px;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     color: white;
     display: flex;
     flex-direction: column; /* Hace que los elementos estén uno debajo del otro */
     line-height: 1.5; /* Ajusta la separación vertical */
 }
 
-
+/* 🔹 Ajuste para pantallas grandes (PC) */
+@media (min-width: 1024px) {
+    .service-text {
+        font-size: 2.5rem;
+    }
+}
 
 .about {
     position: relative;
@@ -76,6 +97,7 @@
     z-index: -1;
 }
 
+
 /* 🔹 Ajuste para pantallas grandes (PC) */
 @media (min-width: 1024px) {
     .background-video {
@@ -94,10 +116,6 @@
     }
 }
 
-
-
-
-
 .row {
     display: flex;
     align-items: center;
@@ -106,28 +124,29 @@
 
     background: rgba(255, 255, 255, 0.2); /* Blanco semitransparente */
     backdrop-filter: blur(10px); /* Efecto de desenfoque */
-    padding: 40px 15px; /* 🔹 Aumenté aún más el padding para hacerla más gruesa */
+    padding: 20px 5px; /* 🔹 Aumenté aún más el padding para hacerla más gruesa */
     border-radius: 15px; /* Bordes redondeados */
     border: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
 
     width: 100%; /* 🔹 Ocupa todo el ancho sin espacios */
-    max-width: none; /* 🔹 Evita que se limite en pantallas grandes */
+    max-width: 2300px; /* Evita que se expanda demasiado */
 
-    position: absolute; /* 🔹 La franja se queda fija y no se mueve */
-    top: 50%; /* 🔹 Centra la franja */
+
+    position: relative; /* Permite que se ajuste mejor al contenido */
+    top: 30%; /* 🔹 Centra la franja */
     left: 0;
     right: 0;
-    transform: translateY(-250px); /* 🔹 Ajusta la altura (puedes subir o bajar) */
+    transform: translateY(-50px); /* 🔹 Ajusta la altura (puedes subir o bajar) */
 }
-
 
 /* 🔹 Ajuste para móviles */
 @media (max-width: 768px) {
     .row {
+        
         position: absolute;
-        transform: translateY(-320px); /* 🔹 Ajusta la altura en celulares */
-        padding: 66px 0px; /* 🔹 Reduce un poco el padding en móviles */
+        transform: translateY(-185px); /* 🔹 Ajusta la altura en celulares */
+        padding: 10px 0px; /* 🔹 Reduce un poco el padding en móviles */
     }
 }
 
@@ -138,11 +157,6 @@
         transform: translateY(-750px); /* 🔹 La sube más en pantallas grandes */
     }
 }
-
-
-
-
-
 
 
 
@@ -188,7 +202,6 @@
 
 
 
-
 .carousel {
     position: relative;
     width: 100%;
@@ -218,6 +231,7 @@
     opacity: 1;
 }
 
+
 /* Botones de navegación */
 .prev, .next {
     position: absolute;
@@ -240,27 +254,31 @@
 
 .carousel-footer {
     width: 100%;
-    height: 100px; /* Puedes ajustar la altura según lo necesites */
+    height: 50px; /* Puedes ajustar la altura según lo necesites */
     background-color: black;
 }
 
 /* Estilos responsive */
 @media (max-width: 768px) {
     .carousel {
-        width: 100%;
-        height: 485px; /* Ajusta la altura en móviles */
+        
+        width: 102%;
+        height: 300px; /* Ajusta la altura en móviles */
     }
 
     .carousel-item img {
-        height: 100%; /* Mantiene la proporción */
+        height: 10rem; /* Mantiene la proporción */
     }
 
     .prev, .next {
-        padding: 20px 30px; /* Ajusta el tamaño de los botones en móviles */
+        padding: 10px 10px; /* Ajusta el tamaño de los botones en móviles */
     }
 
+    .carousel-footer{
+        height: 20px;
+        width: 103%;
+    }
 }
-
 
 
 
@@ -272,9 +290,9 @@
     display: flex;
     justify-content: center; /* Centra la imagen horizontalmente */
     align-items: center; /* Centra la imagen verticalmente (si es necesario) */
-    width: 100%;
+    width: 70%;
     margin: 0 auto;
-    margin-top: 30px; /* Espacio después del carrusel */
+    margin-top: +90px; /* Espacio después del carrusel */
     transform: translateY(-50px); /* 🔹 La sube más en pantallas grandes */
 }
 
@@ -283,12 +301,8 @@
     max-width: 1700px; /* Permite que la imagen crezca en pantallas grandes */
     height: auto;
     border-radius: 10px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno para el efecto de neón */
+    padding: 20px; /* Espaciado interno para el efecto de neón */
     
-    /* 🎆 Efecto de neón 🎆 */
-    border: 5px solid #0a0099; /* Borde color neón (azul cian) */
-    box-shadow: 0 0 15px #5300be, 0 0 30px #5500c4, 0 0 45px #ef40ff;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* 🌟 Efecto de resplandor cuando pasas el mouse */
@@ -300,24 +314,19 @@
 /* 📱 Ajustes para móviles */
 @media (max-width: 768px) {
     .image-container {
-        margin-top: 20px; /* Reduce el espacio en móviles */
+        margin-top: 100px; /* Reduce el espacio en móviles */
     }
 
     .image-container img {
-        width: 95%; /* Se ajusta a móviles */
-        max-width: 95%;
+        
+        width: 290%;
+        height: 300px; /* Ajusta la altura en móviles */
+        
         border: 3px solid #0a0099;
-        padding: 10px; /* Reduce el padding en móviles */
+        padding: 0px; /* Reduce el padding en móviles */
         transform: translateY(-50px); /* 🔹 La sube más en pantallas grandes */
     }
 }
-
-
-
-
-
-
-
 
 
 
@@ -339,18 +348,11 @@
 }
 
 
-
-
-
-
-
-
-
 .home .iconos a img {
     margin: 10px;
-    margin-top: 10px;
+    margin-top: +1.0rem;
     margin-left: 5%;
-    margin-bottom: 40%;
+    margin-bottom: 46%;
     width: 50px;
     height: 50px;
     
@@ -362,6 +364,7 @@
     margin-left: 5%;
     
 } 
+
 
 html{
     font-size: 60.5%;
@@ -407,21 +410,44 @@ body{
     max-width: 90vw; /* Limita el ancho al 90% de la pantalla */
     z-index: 10; /* 🔹 Asegura que esté por encima de la franja */
     
-}
-
-/* 🔹 Ajuste para pantallas grandes */
-@media (min-width: 1024px) {
-    .heading {
-        top: -600px; /* 🔹 Sube el título en pantallas grandes */
-        font-size: 5rem; /* 🔹 Opcional: agranda el texto en PC */
-    }
+    
 }
 
 
 .heading span{
     color: var(--main-color);
     text-transform: uppercase;
+   
+    display: flex;
+
 }
+
+/* 🔹 Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+    .heading {
+        top: -690px; /* 🔹 Sube el título en pantallas grandes */
+        font-size: 5rem; /* 🔹 Opcional: agranda el texto en PC */
+    }
+}
+
+/* 🔹 Ajuste para móviles */
+@media (max-width: 768px) {
+    .heading {
+        top: -22.0rem; /* 🔹 Sube el título en pantallas grandes */
+        font-size: 2.3rem; /* 🔹 Opcional: agranda el texto en PC */
+    }
+
+    .heading .span {
+        line-height: 1.0rem; /* Ajusta la separación vertical */
+        flex-direction: column; /* Hace que los elementos estén uno debajo del otro */
+        display: flex;
+        text-transform: uppercase;
+        
+    }
+}
+    
+
+
 
 
 
@@ -516,6 +542,12 @@ display: none;
 
 
 
+/* 🔹 Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+    .header {
+        padding: 2.9rem 2rem;
+    }
+}
 
 
 
@@ -524,11 +556,11 @@ display: none;
 @media (max-width:991px){
 
     html{
-        font-size: 55%;
+        font-size: 50%;
     }
 
     .header{
-        padding:1.5rem 2rem;
+        padding:1.0rem 1rem;
         
     }
 
@@ -585,4 +617,3 @@ display: none;
     }
 
 }
-
