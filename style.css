@@ -23,11 +23,9 @@
 
 .home video {
     position: relative;
-    width: 100%;
-    max-width: 19000px; /* Ajusta según el tamaño máximo que prefieras */
-    height: 1350px;
-    overflow: hidden;
-    transform: translateY(-50px); /* 🔹 Ajusta la altura en celulares */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Se ajusta automáticamente */
+    max-height: 100vh; /* Evita que el video sea más alto que la pantalla */
 }
 
 /* Ajustes para dispositivos móviles */
@@ -46,15 +44,10 @@
 
 
 .miVideo { 
-    position: relative; /* Permite que el texto se posicione dentro sin salir */
-    display: flex; /* Alineación horizontal del video y el texto */
-    width: 90%; /* Asegura que el video ocupe el ancho completo */
-    height: 10vh; /* Ajusta la altura al 100% de la pantalla */
-    z-index: 0;  
-    margin-left: -210px;
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
-    overflow: hidden; /* Evita que el texto salga */
+    position: relative;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Se ajusta automáticamente */
+    max-height: 100vh; /* Evita que el video sea más alto que la pantalla */
 }
 
 /* Ajustes para celulares */
@@ -80,13 +73,10 @@
 }
 
 .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 500%;
-    height: 200%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
+    position: relative;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Se ajusta automáticamente */
+    max-height: 100vh; /* Evita que el video sea más alto que la pantalla */
 }
 
 /* 🔹 Ajuste para pantallas grandes */
