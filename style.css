@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+:root {
+    --main-color:#006eff;
+    --black:#13131a;
+    --bg:#010103;
+    --plomo: #6b6a6a;
+    --rojoo: #eb1111;
+    --border:.1rem solid rgba(255,255,255,.3)
+}
+
+*{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+
+
+.home video {
+    position: relative;
+    width: 100%;
+    max-width: 19000px; /* Ajusta según el tamaño máximo que prefieras */
+    height: 1350px;
+    overflow: hidden;
+    transform: translateY(-50px); /* 🔹 Ajusta la altura en celulares */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .home video {
+        width: 100vh;
+        height: 100vh;
+        z-index: 0;
+        transform: translateY(-110px); /* 🔹 Ajusta la altura en celulares */
+    }
+}
+
+
+
+
+
+
+.miVideo { 
+    position: relative; /* Permite que el texto se posicione dentro sin salir */
+    display: flex; /* Alineación horizontal del video y el texto */
+    width: 90%; /* Asegura que el video ocupe el ancho completo */
+    height: 10vh; /* Ajusta la altura al 100% de la pantalla */
+    z-index: 0;  
+    margin-left: -210px;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    overflow: hidden; /* Evita que el texto salga */
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .miVideo {
+        width: 100vh; /* Asegura que el video ocupe el ancho completo */
+        height: 90px; /* Ajusta la altura al 100% de la pantalla */
+        
+    }
+}
+
+
+
+
+.overlay-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: -1;
+    
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 200%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+/* 🔹 Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+    .background-video {
+        width: 250%;
+        height: 155%;
+        transform: translateY(-1225px); /* 🔹 Ajusta la altura en celulares */
+    }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .background-video {
+        width: 100vh;
+        height: 100vh;
+        transform: translateY(-780px); /* 🔹 Ajusta la altura en celulares */
+    }
+}
+
+
+.service-text {
+    font-size: 4.5rem;  /* Tamaño del texto */
+    color: white;
+    display: flex;
+    flex-direction: column; /* "Service de Publicité" arriba, "V.V.W" abajo */
+    
+    justify-content: center; /* Centrar verticalmente */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    line-height: 1.2; /* Espaciado entre líneas */
+    width: 100%; /* Ocupa todo el ancho */
+    white-space: nowrap; /* Evita saltos de línea */
+    position: absolute; /* Posicionamiento relativo al contenedor */
+    top: 50%; /* Ajustar verticalmente */
+    left: 50%; /* Ajustar horizontalmente */
+    transform: translate(-5px, -30px); /* Centrar perfectamente */
+}
+/* 🔹 Ajuste para pantallas grandes (PC) */
+@media (min-width: 768px) {
+    .service-text {
+        font-size: 3.2rem; /* Ajustar tamaño en pantallas grandes */
+    }
+}
+
+
+
+
+.about {
+    position: relative;
+    padding: 100px 50px;
+    text-align: center;
+    color: white;
+}
+
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.2); /* Blanco semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    padding: 40px 15px; /* 🔹 Aumenté aún más el padding para hacerla más gruesa */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+
+    width: 100vh; /* 🔹 Ocupa todo el ancho sin espacios */
+    max-width: none; /* 🔹 Evita que se limite en pantallas grandes */
+
+    position: absolute; /* 🔹 La franja se queda fija y no se mueve */
+    top: 50%; /* 🔹 Centra la franja */
+    left: 0;
+    right: 0;
+    transform: translateY(-250px); /* 🔹 Ajusta la altura (puedes subir o bajar) */
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .row {
+        position: absolute;
+        width: 100vh;
+        height: 50vh;
+        transform: translateY(-430px); /* 🔹 Ajusta la altura en celulares */
+        padding: 10.5rem; /* 🔹 Reduce un poco el padding en móviles */
+
+    }
+}
+
+
+
+/* 🔹 Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+    .row {
+        width: 221vh;
+        height: 80vh;
+        padding: 13px 2px; /* 🔹 Hace la franja más gruesa en PC */
+        transform: translateY(-850px); /* 🔹 La sube más en pantallas grandes */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-2 {
+    display: inline-block;
+    padding: 10px 100px; /* Ajusta el tamaño del botón */
+    font-size: 17px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase;
+    color: #fff; /* Color del texto */
+    background: linear-gradient(45deg, #ff52a3, #3215d3); /* Color degradado */
+    border: none;
+    border-radius: 15px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(162, 0, 255, 0.5); /* Sombra */
+    text-decoration: none; /* Elimina subrayado */
+    text-align: center;
+}
+
+.btn-2:hover {
+    background: linear-gradient(45deg, #2b9416, #00ffff); /* Cambia el color al pasar el cursor */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 15000px; /* Ajusta según el tamaño máximo que prefieras */
+    height: 1350px;
+    overflow: hidden;
+    border-radius: 10px;
+    top: -150px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-footer {
+    width: 100%;
+    height: 100px; /* Puedes ajustar la altura según lo necesites */
+    background-color: black;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100vh;
+        height: 75vh;
+        transform: translateY(+100px); /* 🔹 Ajusta la altura en celulares */
+    }
+
+    .carousel-item img {
+        height: 100%; /* Mantiene la proporción */
+    }
+
+    .prev, .next {
+        padding: 20px 30px; /* Ajusta el tamaño de los botones en móviles */
+    }
+}
+
+
+
+
+
+
+
+
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente (si es necesario) */
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px; /* Espacio después del carrusel */
+    transform: translateY(-50px); /* 🔹 La sube más en pantallas grandes */
+}
+
+.image-container img {
+    width: 100%; /* Se ajusta automáticamente al contenedor */
+    max-width: 1700px; /* Permite que la imagen crezca en pantallas grandes */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno para el efecto de neón */
+    
+    /* 🎆 Efecto de neón 🎆 */
+    border: 30px solid #0a0099; /* Borde color neón (azul cian) */
+   
+}
+
+
+
+
+/* 📱 Ajustes para móviles */
+@media (max-width: 768px) {
+    .image-container {
+        width: 100vh;
+        height: 100vh;
+        transform: translateY(-40px); /* 🔹 Ajusta la altura en celulares */
+    }
+
+    .image-container img {
+        width: 95%; /* Se ajusta a móviles */
+        max-width: 95%;
+        border: 3px solid #0a0099;
+        padding: 10px; /* Reduce el padding en móviles */
+        transform: translateY(-150px); /* 🔹 La sube más en pantallas grandes */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.content{
+    flex: 3; /* Que el texto ocupe el espacio restante */
+    width: 100%; /* 🔹 Ocupa todo el ancho sin espacios */
+    
+    margin-top: -5px;
+    font-size: 2.9rem;
+    color: #ffffff;
+}
+
+/* 🔹 Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+    .content {
+        top: -600px; /* 🔹 Sube el título en pantallas grandes */
+        font-size: 5rem; /* 🔹 Opcional: agranda el texto en PC */
+    }
+}
+
+
+
+
+
+
+
+
+
+.home .iconos a img {
+    margin: 10px;
+    margin-top: -9.0rem;
+    margin-left: 5%;
+    margin-bottom: 46%;
+    width: 85px;
+    height: 80px;
+    
+    
+    
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .home .iconos a img {
+        object-fit: cover;
+        margin-left: 6%;
+        transform: translate(-20%, +10%);
+        width: 70px;
+        height: 70px;
+        margin-top: -240px;
+        
+    }
+
+}
+
+
+
+.contact-text {
+    font-size: 5rem; /* Tamaño base */
+    color: white;
+    font-weight: bold;
+    
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1px; /* Espaciado inferior */
+    position: absolute; /* Asegura que se pueda posicionar con precisión */
+    top: +300%; /* Lo centra verticalmente */
+    left: 10%; /* Lo centra horizontalmente */
+    transform: translate(-50%, -100%); /* Ajusta la posición al centro exacto */
+   
+}
+
+/* 🔹 Ajuste para celular */
+@media (min-width: 1050px) {
+    .contact-text {
+        font-size: 5.0rem; /* Tamaño más grande en PC */
+        letter-spacing: 3px;
+        transform: translate(-5%, -100%); /* Ajusta la posición al centro exacto */
+   
+        
+    }
+}
+
+/* 🔹 Ajuste para celular */
+@media (min-width: 768px) {
+    .contact-text {
+        font-size: 5.0rem; /* Tamaño más grande en PC */
+        letter-spacing: 3px;
+        transform: translate(-20%, -3550%); /* Ajusta la posición al centro exacto */
+   
+        
+    }
+}
+
+
+
+
+
+
+
+html{
+    font-size: 60.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+
+
+
+
+
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    position: absolute; /* 🔹 Lo coloca encima de otros elementos */
+    top: -220px; /* 🔹 Ajusta este valor para subir o bajar */
+    left: 50%;
+    transform: translateX(-50%); /* 🔹 Lo centra horizontalmente */
+    white-space: nowrap; /* ❗ Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Evita desbordamiento */
+    max-width: 90vw; /* Limita el ancho al 90% de la pantalla */
+    z-index: 10; /* 🔹 Asegura que esté por encima de la franja */
+    
+}
+
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+    display: flex;
+    
+}
+
+
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .heading {
+        
+        transform: translateX(-20%); /* 🔹 Lo centra horizontalmente */
+        margin-top: -65px;
+        font-size: 3.3rem; /* 🔹 Opcional: agranda el texto en PC */
+    }
+
+    .heading .span{
+        
+        font-size: 2.3rem; /* 🔹 Opcional: agranda el texto en PC */
+    }
+}
+
+/* 🔹 Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+    .heading {
+        
+        top: -750px; /* 🔹 Sube el título en pantallas grandes */
+        font-size: 5rem; /* 🔹 Opcional: agranda el texto en PC */
+    }
+}
+
+
+
+
+
+.header {
+    background: url('galeria/franja1.png') no-repeat center;
+    background-size: cover; /* Ajusta la imagen al tamaño del menú */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+
+.header .navbar a{
+   margin:0 1rem;
+   font-size: 2.6rem;
+   color: #fff;
+}
+
+.header .navbar a:hover{
+    color: var(--rojoo);
+    border-bottom: .1rem solid var(--rojoo);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3.4rem;
+    margin-left: 3rem;
+    
+}
+
+.header .icons div:hover{
+    color:var(--main-color)
+    
+}
+
+#menu-btn{
+display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+        
+    }
+
+    
+}
+
+@media (max-width:768px){
+    
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #ffffff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+        
+    }
+   
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin:1.4rem;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+
